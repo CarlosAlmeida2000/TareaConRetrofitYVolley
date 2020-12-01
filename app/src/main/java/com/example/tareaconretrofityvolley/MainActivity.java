@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        interfaceRetrofit intac = retrofit.create(interfaceRetrofit.class);
+        interfaceRetrofit api = retrofit.create(interfaceRetrofit.class);
 
-        Call<List<KushkiR>> call = intac.getDatos();
+        Call<List<KushkiR>> call = api.getDatos();
 
         call.enqueue(new Callback<List<KushkiR>>() {
             @Override
